@@ -1,0 +1,32 @@
+@use '../../styles/_variables.scss' as *;
+
+.header {
+  display: flex;
+  padding: 20px 24px;
+  align-items: center;
+  background-color: $background-surface;
+  border: 4px solid $border-color;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  aspect-ratio: 1;
+  height: 50px;
+}
+
+.checkout-icon {
+  height: 40px;
+}

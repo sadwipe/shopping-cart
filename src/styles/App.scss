@@ -1,0 +1,7 @@
+@use './variables' as *;
+
+body {
+  background-color: $background-color;
+  font-family: $font-stack;
+  color: $text-color;
+}
