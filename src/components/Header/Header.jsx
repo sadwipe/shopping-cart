@@ -6,16 +6,22 @@ import styles from './Header.module.scss';
 
 import checkoutIconActive from '../../assets/icons/shopping-cart-active.svg';
 import checkoutIcon from '../../assets/icons/shopping-cart.svg';
-import logoIcon from '../../assets/icons/logo.svg';
+import logoIconGreen from '../../assets/icons/logo-green.svg';
+import logoIconPurple from '../../assets/icons/logo-purple.svg';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles['nav-container']}>
-        <div className={styles['home-container']}>
-          <img className={styles.logo} src={logoIcon} alt='Creeper Logo' />
-          <CustomNavLink to='/'>Home</CustomNavLink>
-        </div>
+        <NavLink to='/'>
+          {({ isActive }) => (
+            <img
+              className={styles.logo}
+              src={isActive ? logoIconPurple : logoIconGreen}
+              alt='Logo Icon'
+            />
+          )}
+        </NavLink>
         <CustomNavLink to='/shop'>Shop</CustomNavLink>
         <NavLink to='/checkout'>
           {({ isActive }) => (
