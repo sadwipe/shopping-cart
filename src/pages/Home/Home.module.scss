@@ -20,7 +20,7 @@
   text-decoration: none;
   color: $purple-main;
   font-size: 1.25rem;
-  animation: blinker 1.5s linear 10;
+  animation: blinker 1.5s linear infinite;
 }
 
 @keyframes blinker {
