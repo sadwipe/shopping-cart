@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles['nav-container']}>
-        <NavLink to='/'>
+        <NavLink data-testid='header-logo' to='/'>
           {({ isActive }) => (
             <img
               className={styles.logo}
@@ -23,7 +23,7 @@ export default function Header() {
           )}
         </NavLink>
         <CustomNavLink to='/shop'>Shop</CustomNavLink>
-        <NavLink to='/checkout'>
+        <NavLink data-testid='checkout-logo' to='/checkout'>
           {({ isActive }) => (
             <div className={styles['checkout-container']}>
               <img
