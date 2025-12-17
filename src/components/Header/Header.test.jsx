@@ -23,7 +23,7 @@ describe('Header', () => {
     expect(headerCart).toBeInTheDocument();
   });
 
-  it('navigatest to home when clicking logo', async () => {
+  it('navigates to home when clicking logo', async () => {
     const user = userEvent.setup();
 
     render(
@@ -48,6 +48,7 @@ describe('Header', () => {
       <MemoryRouter initialEntries={['/']}>
         <Header />
         <Routes>
+          <Route path='/' element={<div>Home</div>} />
           <Route path='/shop' element={<h1>Shop Page</h1>} />
         </Routes>
       </MemoryRouter>,
@@ -65,6 +66,7 @@ describe('Header', () => {
       <MemoryRouter initialEntries={['/']}>
         <Header />
         <Routes>
+          <Route path='/' element={<div>Home</div>} />
           <Route path='/checkout' element={<h1>Checkout Page</h1>} />
         </Routes>
       </MemoryRouter>,

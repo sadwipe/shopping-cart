@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "prepare": "husky",
-    "test": "vitest"
+    "test": "vitest --reporter verbose"
   },
   "dependencies": {
     "prettier": "^3.7.4",
