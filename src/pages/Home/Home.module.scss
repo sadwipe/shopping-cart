@@ -9,17 +9,17 @@
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: $home-description-font-size;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: $home-title-font-size;
 }
 
 .link {
   text-decoration: none;
   color: $purple-main;
-  font-size: 1.25rem;
+  font-size: $home-link-font-size;
   animation: blinker 1.5s linear infinite;
 }
 

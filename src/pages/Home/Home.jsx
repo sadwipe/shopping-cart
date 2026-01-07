@@ -4,7 +4,7 @@ import styles from './Home.module.scss';
 
 export default function Home() {
   return (
-    <div className={`${styles['page-container']} ${styles['home-page']}`}>
+    <div className={styles['home-page']}>
       <h1 className={styles.title}>Welcome to MineRetro Shop</h1>
       <pre className={styles.description}>
         {`< Your one-stop terminal for rare Minecraft items

@@ -1,0 +1,41 @@
+@use '../../styles/_variables.scss' as *;
+
+.shop-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.shop-title {
+  padding-right: 1rem;
+  border-right: 2px solid $border-color;
+  font-size: $shop-title-font-size;
+}
+
+.sorting-button {
+  font-size: $shop-sort-font-size;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  color: $text-color;
+  font-family: $font-stack;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+}
+
+.chevron {
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  transform: rotate(45deg);
+  margin-top: -0.15em;
+}
+
+.item-count {
+  margin-left: auto;
+  font-size: $shop-item-count-font-size;
+}

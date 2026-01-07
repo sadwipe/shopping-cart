@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+
+.item-card {
+  border: 2px solid $border-color;
+  padding: 10px;
+  font-size: 0.75rem;
+  display: flex;
+  gap: 20px;
+  // min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+.item-title {
+  color: $purple-main;
+  font-size: $shop-item-title-font-size;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+.item-image {
+  aspect-ratio: 1;
+  height: clamp(50px, 5vw, 100px);
+}
+
+.item-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  line-height: 1.4;
+  font-size: $shop-item-description-font-size;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
+
+/* Chrome / Edge / Safari */
+.item-description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.item-description::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.item-description::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 4px;
+}
+
+// .item-description::-webkit-scrollbar {
+//   display: none;
+// }

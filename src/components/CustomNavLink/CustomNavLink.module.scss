@@ -1,7 +1,7 @@
 @use '../../styles/_variables.scss' as *;
 
 .nav-link {
-  font-size: 1.25rem;
+  font-size: $navlink-font-size;
   text-decoration: none;
   padding: 6px 12px;
   border: 2px solid $border-color;

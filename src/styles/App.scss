@@ -12,7 +12,6 @@ body {
   color: $text-color;
   height: 100vh;
 }
-
 #root {
   height: 100%;
   display: flex;
@@ -24,4 +23,6 @@ main {
   display: flex;
   flex-direction: column;
   padding: 100px 30px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
