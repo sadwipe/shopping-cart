@@ -31,33 +31,50 @@ function binarySearchItem(array, item) {
 }
 
 export function getShopItems(array) {
-  const shopItemIds = [
-    'Beacon',
-    'Bow',
-    'Diamond Pickaxe',
-    'Diamond Sword',
-    'Elytra',
-    'Enchanted Book',
-    'Enchanted Golden Apple',
-    'Golden Apple',
-    'Golden Carrot',
-    'Nether Star',
-    'Netherite Sword',
-    'Potion of Invisibility',
-    'Shulker Box',
-    'Totem of Undying',
-    'Trident',
+  const shopItems = [
+    { name: 'Beacon', cost: 64 },
+    { name: 'Bow', cost: 8 },
+    { name: 'Diamond Pickaxe', cost: 24 },
+    { name: 'Diamond Sword', cost: 20 },
+    { name: 'Elytra', cost: 48 },
+    { name: 'Enchanted Book', cost: 16 },
+    { name: 'Enchanted Golden Apple', cost: 64 },
+    { name: 'Golden Apple', cost: 12 },
+    { name: 'Golden Carrot', cost: 4 },
+    { name: 'Nether Star', cost: 64 },
+    { name: 'Netherite Sword', cost: 64 },
+    { name: 'Potion of Invisibility', cost: 10 },
+    { name: 'Shulker Box', cost: 20 },
+    { name: 'Totem of Undying', cost: 32 },
+    { name: 'Trident', cost: 28 },
   ];
 
-  const result = [];
+  const items = [];
 
-  shopItemIds.forEach((item) => {
-    result.push(binarySearchItem(array, item));
+  shopItems.forEach((item) => {
+    items.push({
+      ...binarySearchItem(array, item.name),
+      cost: item.cost,
+    });
   });
+
+  // remove the "namespacedId" and replace it with "id"
+  const result = items.map(({ namespacedId, ...rest }) => {
+    return {
+      ...rest,
+      id: namespacedId,
+    };
+  });
+
+  console.log(result);
 
   return result;
 }
 
 export function summarizeDescription(string) {
   return string.split('.')[0];
+}
+
+export function clamp(value) {
+  return Math.min(100, Math.max(0, value));
 }

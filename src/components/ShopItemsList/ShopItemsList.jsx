@@ -19,8 +19,8 @@ export default function ShopItemsList() {
 
   return (
     <ul className={styles['items-container']}>
-      {items.map((el) => (
-        <ShopItem key={el.namespacedId} element={el} />
+      {items.map((item) => (
+        <ShopItem key={item.id} item={item} />
       ))}
     </ul>
   );

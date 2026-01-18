@@ -14,6 +14,7 @@ export default function App() {
   const apiUrl = 'https://minecraft-api.vercel.app/api/items';
 
   const [items, setItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -25,7 +26,10 @@ export default function App() {
         }
 
         const result = await response.json();
-        setItems(getShopItems(result));
+
+        const processedItems = getShopItems(result);
+
+        setItems(processedItems);
       } catch (error) {
         setError(error);
       }
@@ -36,7 +40,7 @@ export default function App() {
 
   return (
     <>
-      <ShopContext value={{ items, error }}>
+      <ShopContext value={{ items, error, cartItems, setCartItems }}>
         <Header />
         <main>
           <Outlet />

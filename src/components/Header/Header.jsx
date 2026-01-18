@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router';
 
+import { useContext } from 'react';
+import ShopContext from '../../context/ShopContext';
+
 import CustomNavLink from '../CustomNavLink/CustomNavLink';
 
 import styles from './Header.module.scss';
@@ -10,6 +13,15 @@ import logoIconGreen from '../../assets/icons/logo-green.svg';
 import logoIconPurple from '../../assets/icons/logo-purple.svg';
 
 export default function Header() {
+  const { cartItems } = useContext(ShopContext);
+
+  const cartItemsLength = cartItems.reduce(
+    (sum, item) => sum + item.quantity,
+    0,
+  );
+
+  const displayCount = cartItemsLength > 99 ? '99+' : cartItemsLength;
+
   return (
     <header className={styles.header}>
       <nav className={styles['nav-container']}>
@@ -31,7 +43,9 @@ export default function Header() {
                 src={isActive ? checkoutIconActive : checkoutIcon}
                 alt='Checkout Icon'
               />
-              <div className={styles['cart-capacity']}></div>
+              {cartItemsLength !== 0 && (
+                <div className={styles['cart-capacity']}>{displayCount}</div>
+              )}
             </div>
           )}
         </NavLink>

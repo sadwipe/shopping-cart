@@ -58,3 +58,14 @@
 .add-button:active {
   transform: scale(0.95);
 }
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cost {
+  border: 1px solid $border-color;
+  padding: 5px 10px;
+}

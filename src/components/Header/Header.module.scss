@@ -31,3 +31,26 @@
 .checkout-icon {
   height: 40px;
 }
+
+.cart-capacity {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+
+  width: 25px;
+  height: 25px;
+
+  background-color: $text-color;
+  color: black;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  font-size: 0.5rem;
+  font-weight: 700;
+}
