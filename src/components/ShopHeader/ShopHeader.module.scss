@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 .shop-title {
@@ -26,13 +26,22 @@
   cursor: pointer;
 }
 
-.chevron {
+.chevron-down {
   width: 0.4em;
   height: 0.4em;
   border-right: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
   transform: rotate(45deg);
   margin-top: -0.15em;
+}
+
+.chevron-up {
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  transform: rotate(-135deg);
+  // margin-top: -0.15em;
 }
 
 .item-count {

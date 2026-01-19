@@ -38,9 +38,25 @@ export default function App() {
     fetchUrl();
   }, []);
 
+  function sortItems(option) {
+    const sorted = [...items].sort((a, b) => {
+      switch (option) {
+        case 'Price: Low to High':
+          return a.cost - b.cost;
+        case 'Price: High to Low':
+          return b.cost - a.cost;
+        case 'Alphabetical: Z-A':
+          return b.name.localeCompare(a.name);
+        default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+    setItems(sorted);
+  }
+
   return (
     <>
-      <ShopContext value={{ items, error, cartItems, setCartItems }}>
+      <ShopContext value={{ items, error, cartItems, setCartItems, sortItems }}>
         <Header />
         <main>
           <Outlet />

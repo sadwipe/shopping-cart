@@ -1,3 +1,4 @@
+// bottom right timer
 export function getTime() {
   const date = new Date();
   const currentTime = date.toLocaleTimeString([], {
@@ -8,6 +9,7 @@ export function getTime() {
   return currentTime;
 }
 
+// used for picking only the items we need from fetched array
 function binarySearchItem(array, item) {
   let low = 0;
   let high = array.length - 1;
@@ -30,6 +32,7 @@ function binarySearchItem(array, item) {
   return -1;
 }
 
+// Items we display on the page + cost
 export function getShopItems(array) {
   const shopItems = [
     { name: 'Beacon', cost: 64 },
@@ -65,8 +68,6 @@ export function getShopItems(array) {
       id: namespacedId,
     };
   });
-
-  console.log(result);
 
   return result;
 }

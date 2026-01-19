@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.dropdown {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  button {
+    background-color: black;
+    color: $text-color;
+    font-family: $font-stack;
+    border: 1px solid $text-color;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: $shop-sort-buttons-font-size;
+    text-align: left;
+  }
+  button:hover {
+    background-color: $text-color;
+    color: black;
+  }
+}

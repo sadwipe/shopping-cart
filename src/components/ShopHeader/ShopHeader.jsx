@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import ShopContext from '../../context/ShopContext';
 
 import styles from './ShopHeader.module.scss';
@@ -8,16 +8,33 @@ import Dropdown from '../Dropdown/Dropdown';
 export default function ShopHeader() {
   const { items } = useContext(ShopContext);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [sortingOption, setSortingOption] = useState('Alphabetical: A-Z');
+
+  function toggleDropdown() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className={styles['shop-header']}>
       <h1 className={styles['shop-title']}>Shop</h1>
 
       <div className={styles['sorting-container']}>
-        <button className={styles['sorting-button']}>
-          Sort
-          <span className={styles['chevron']} aria-hidden='true'></span>
+        <button onClick={toggleDropdown} className={styles['sorting-button']}>
+          Sort: {sortingOption}
+          {isOpen ? (
+            <span className={styles['chevron-up']} aria-hidden='true'></span>
+          ) : (
+            <span className={styles['chevron-down']} aria-hidden='true'></span>
+          )}
         </button>
-        <Dropdown />
+        {isOpen && (
+          <Dropdown
+            sortingOption={sortingOption}
+            setSortingOption={setSortingOption}
+            setIsOpen={setIsOpen}
+          />
+        )}
       </div>
 
       <div className={styles['item-count']}>
