@@ -68,4 +68,14 @@
 .cost {
   border: 1px solid $border-color;
   padding: 5px 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.price {
+  height: 30px;
+  width: 30px;
+  aspect-ratio: 1;
 }

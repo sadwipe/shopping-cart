@@ -4,6 +4,7 @@ import ShopContext from '../../context/ShopContext';
 import styles from './AddToCart.module.scss';
 import minus from '../../assets/icons/minus.svg';
 import plus from '../../assets/icons/plus.svg';
+import emerald from '../../assets/icons/emerald.png';
 
 import { clamp } from '../../utils/utils';
 
@@ -114,7 +115,10 @@ export default function AddToCart({ item }) {
         />
       </div>
       <div className={styles['price-container']}>
-        <span className={styles.cost}>{`$${item.cost}`}</span>
+        <span className={styles.cost}>
+          <img src={emerald} class={styles.price} alt='emerald icon' />
+          {item.cost}
+        </span>
         <button
           onClick={() => addItemToCart(item)}
           className={styles['add-button']}
