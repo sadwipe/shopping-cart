@@ -1,4 +1,4 @@
-@use '../../styles/_variables.scss' as *;
+@use '../../../styles/variables' as *;
 
 .shop-header {
   display: flex;
@@ -24,6 +24,10 @@
   align-items: center;
   gap: 0.4em;
   cursor: pointer;
+}
+
+.sorting-container {
+  position: relative;
 }
 
 .chevron-down {

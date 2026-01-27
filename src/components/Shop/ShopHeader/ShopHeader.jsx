@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import ShopContext from '../../context/ShopContext';
+import ShopContext from '../../../context/ShopContext';
 
 import styles from './ShopHeader.module.scss';
 

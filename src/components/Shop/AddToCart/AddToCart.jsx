@@ -1,12 +1,12 @@
 import { useId, useContext, useState } from 'react';
-import ShopContext from '../../context/ShopContext';
+import ShopContext from '../../../context/ShopContext';
 
 import styles from './AddToCart.module.scss';
-import minus from '../../assets/icons/minus.svg';
-import plus from '../../assets/icons/plus.svg';
-import emerald from '../../assets/icons/emerald.png';
+import minus from '../../../assets/icons/minus.svg';
+import plus from '../../../assets/icons/plus.svg';
+import emerald from '../../../assets/icons/emerald.png';
 
-import { clamp } from '../../utils/utils';
+import { clamp } from '../../../utils/utils';
 
 export default function AddToCart({ item }) {
   const id = useId();

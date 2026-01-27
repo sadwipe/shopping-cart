@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 
-import ShopContext from '../../context/ShopContext';
+import ShopContext from '../../../context/ShopContext';
 
-import ShopItem from '../ShopItem/ShopItem';
+import ShopItem from '../../../components/Shop/ShopItem/ShopItem';
 
 import styles from './ShopItemsList.module.scss';
 

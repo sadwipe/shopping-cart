@@ -1,16 +1,16 @@
 import { NavLink } from 'react-router';
 
 import { useContext } from 'react';
-import ShopContext from '../../context/ShopContext';
+import ShopContext from '../../../context/ShopContext';
 
 import CustomNavLink from '../CustomNavLink/CustomNavLink';
 
 import styles from './Header.module.scss';
 
-import checkoutIconActive from '../../assets/icons/shopping-cart-active.svg';
-import checkoutIcon from '../../assets/icons/shopping-cart.svg';
-import logoIconGreen from '../../assets/icons/logo-green.svg';
-import logoIconPurple from '../../assets/icons/logo-purple.svg';
+import checkoutIconActive from '../../../assets/icons/shopping-cart-active.svg';
+import checkoutIcon from '../../../assets/icons/shopping-cart.svg';
+import logoIconGreen from '../../../assets/icons/logo-green.svg';
+import logoIconPurple from '../../../assets/icons/logo-purple.svg';
 
 export default function Header() {
   const { cartItems } = useContext(ShopContext);
