@@ -1,0 +1,39 @@
+@use '../../../styles/variables' as *;
+
+.summary-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.25rem;
+}
+
+p {
+  display: flex;
+  align-items: center;
+}
+
+.emerald {
+  height: 40px;
+}
+
+.checkout-btn {
+  text-decoration: none;
+  color: $text-color;
+  font-size: $home-link-font-size;
+  animation: blinker 1.5s linear infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

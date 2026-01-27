@@ -1,0 +1,26 @@
+@use '../../../styles/variables' as *;
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  font-size: 1.5rem;
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $purple-main;
+  font-size: $home-link-font-size;
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

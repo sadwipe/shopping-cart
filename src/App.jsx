@@ -17,6 +17,11 @@ export default function App() {
   const [cartItems, setCartItems] = useState([]);
   const [error, setError] = useState(null);
 
+  const cartItemsLength = cartItems.reduce(
+    (sum, item) => sum + item.quantity,
+    0,
+  );
+
   useEffect(() => {
     async function fetchUrl() {
       try {
@@ -56,7 +61,16 @@ export default function App() {
 
   return (
     <>
-      <ShopContext value={{ items, error, cartItems, setCartItems, sortItems }}>
+      <ShopContext
+        value={{
+          items,
+          error,
+          cartItems,
+          setCartItems,
+          cartItemsLength,
+          sortItems,
+        }}
+      >
         <Header />
         <main>
           <Outlet />

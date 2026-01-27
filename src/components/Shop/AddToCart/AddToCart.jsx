@@ -116,7 +116,7 @@ export default function AddToCart({ item }) {
       </div>
       <div className={styles['price-container']}>
         <span className={styles.cost}>
-          <img src={emerald} class={styles.price} alt='emerald icon' />
+          <img src={emerald} className={styles.price} alt='emerald icon' />
           {item.cost}
         </span>
         <button

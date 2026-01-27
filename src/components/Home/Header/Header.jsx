@@ -13,12 +13,7 @@ import logoIconGreen from '../../../assets/icons/logo-green.svg';
 import logoIconPurple from '../../../assets/icons/logo-purple.svg';
 
 export default function Header() {
-  const { cartItems } = useContext(ShopContext);
-
-  const cartItemsLength = cartItems.reduce(
-    (sum, item) => sum + item.quantity,
-    0,
-  );
+  const { cartItemsLength } = useContext(ShopContext);
 
   const displayCount = cartItemsLength > 99 ? '99+' : cartItemsLength;
 
