@@ -14,13 +14,24 @@ export default function App() {
   const apiUrl = 'https://minecraft-api.vercel.app/api/items';
 
   const [items, setItems] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+
+  // get the cartItems from localStorage if it is available, otherwise empty array.
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem('cartItems');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
   const [error, setError] = useState(null);
 
   const cartItemsLength = cartItems.reduce(
     (sum, item) => sum + item.quantity,
     0,
   );
+
+  // save cartItems to localStorage so they can persist
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   useEffect(() => {
     async function fetchUrl() {
