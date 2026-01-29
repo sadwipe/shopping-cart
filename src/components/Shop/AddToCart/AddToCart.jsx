@@ -6,7 +6,7 @@ import minus from '../../../assets/icons/minus.svg';
 import plus from '../../../assets/icons/plus.svg';
 import emerald from '../../../assets/icons/emerald.png';
 
-import { clamp } from '../../../utils/utils';
+import { clamp } from '../../../utils/mathUtils';
 
 export default function AddToCart({ item }) {
   const id = useId();
@@ -115,7 +115,7 @@ export default function AddToCart({ item }) {
         />
       </div>
       <div className={styles['price-container']}>
-        <span className={styles.cost}>
+        <span data-testid='cost' className={styles.cost}>
           <img src={emerald} className={styles.price} alt='emerald icon' />
           {item.cost}
         </span>

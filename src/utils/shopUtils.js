@@ -1,14 +1,3 @@
-// bottom right timer
-export function getTime() {
-  const date = new Date();
-  const currentTime = date.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-  });
-  return currentTime;
-}
-
 // used for picking only the items we need from fetched array
 function binarySearchItem(array, item) {
   let low = 0;
@@ -74,8 +63,4 @@ export function getShopItems(array) {
 
 export function summarizeDescription(string) {
   return string.split('.')[0];
-}
-
-export function clamp(value) {
-  return Math.min(100, Math.max(0, value));
 }

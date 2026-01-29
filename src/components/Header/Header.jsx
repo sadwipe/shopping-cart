@@ -1,16 +1,14 @@
 import { NavLink } from 'react-router';
 
 import { useContext } from 'react';
-import ShopContext from '../../../context/ShopContext';
-
-import CustomNavLink from '../CustomNavLink/CustomNavLink';
+import ShopContext from '../../context/ShopContext';
 
 import styles from './Header.module.scss';
 
-import checkoutIconActive from '../../../assets/icons/shopping-cart-active.svg';
-import checkoutIcon from '../../../assets/icons/shopping-cart.svg';
-import logoIconGreen from '../../../assets/icons/logo-green.svg';
-import logoIconPurple from '../../../assets/icons/logo-purple.svg';
+import checkoutIconActive from '../../assets/icons/shopping-cart-active.svg';
+import checkoutIcon from '../../assets/icons/shopping-cart.svg';
+import logoIconGreen from '../../assets/icons/logo-green.svg';
+import logoIconPurple from '../../assets/icons/logo-purple.svg';
 
 export default function Header() {
   const { cartItemsLength } = useContext(ShopContext);
@@ -29,12 +27,19 @@ export default function Header() {
             />
           )}
         </NavLink>
-        <CustomNavLink to='/shop'>Shop</CustomNavLink>
+        <NavLink
+          to='/shop'
+          className={({ isActive }) =>
+            `${styles['nav-link']} ${isActive ? styles.active : ''}`
+          }
+        >
+          Shop
+        </NavLink>
         <NavLink data-testid='checkout-logo' to='/checkout'>
           {({ isActive }) => (
             <div className={styles['checkout-container']}>
               <img
-                className={`${styles['checkout-icon']} ${isActive ? styles.active : ''}`}
+                className={styles['checkout-icon']}
                 src={isActive ? checkoutIconActive : checkoutIcon}
                 alt='Checkout Icon'
               />

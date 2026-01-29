@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import styles from './Footer.module.scss';
 
-import { getTime } from '../../utils/utils';
+import { getTime } from '../../utils/timeUtils';
 
 export default function Footer() {
   const currentTime = getTime();

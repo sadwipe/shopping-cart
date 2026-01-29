@@ -1,4 +1,4 @@
-@use '../../../styles/_variables.scss' as *;
+@use '../../styles/_variables.scss' as *;
 
 .header {
   display: flex;
@@ -53,4 +53,29 @@
 
   font-size: 0.5rem;
   font-weight: 700;
+}
+
+.nav-link {
+  font-size: $navlink-font-size;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 2px solid $border-color;
+  background-color: $background-color;
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $text-color;
+    color: $background-color;
+  }
+}
+
+.active {
+  background-color: $text-color;
+  color: $background-color;
+
+  &:hover {
+    background-color: $background-color;
+    color: $text-color;
+  }
 }

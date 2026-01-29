@@ -1,5 +1,5 @@
 import styles from './ShopItem.module.scss';
-import { summarizeDescription } from '../../../utils/utils';
+import { summarizeDescription } from '../../../utils/shopUtils';
 
 import AddToCart from '../AddToCart/AddToCart';
 

@@ -3,11 +3,11 @@ import { Outlet } from 'react-router';
 
 import ShopContext from './context/ShopContext';
 
-import { getShopItems } from './utils/utils';
+import { getShopItems } from './utils/shopUtils';
 
 import './styles/App.scss';
 
-import Header from './components/Home/Header/Header';
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 export default function App() {

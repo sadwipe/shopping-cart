@@ -23,9 +23,17 @@ export default function ShopHeader() {
         <button onClick={toggleDropdown} className={styles['sorting-button']}>
           Sort: {sortingOption}
           {isOpen ? (
-            <span className={styles['chevron-up']} aria-hidden='true'></span>
+            <span
+              data-testid='chevron-up'
+              className={styles['chevron-up']}
+              aria-hidden='true'
+            ></span>
           ) : (
-            <span className={styles['chevron-down']} aria-hidden='true'></span>
+            <span
+              data-testid='chevron-down'
+              className={styles['chevron-down']}
+              aria-hidden='true'
+            ></span>
           )}
         </button>
         {isOpen && (
@@ -38,7 +46,7 @@ export default function ShopHeader() {
       </div>
 
       <div className={styles['item-count']}>
-        {items.lenght !== 1 ? `${items.length} items` : '1 Item'}
+        {items.length !== 1 ? `${items.length} items` : '1 Item'}
       </div>
     </div>
   );
