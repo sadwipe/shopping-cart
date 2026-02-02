@@ -66,9 +66,9 @@ li {
   li {
     display: flex;
     flex-direction: column; // Stacks all fields vertically
-    align-items: stretch;   // Allows children to take full width of the box
+    align-items: stretch; // Allows children to take full width of the box
     gap: 15px;
-    width: 90%;             // Centered container look
+    width: 90%; // Centered container look
     margin: 0 auto 15px auto;
     padding: 20px;
     text-align: center;
@@ -95,7 +95,7 @@ li {
     justify-content: center; // Centers the +/- and number
     align-items: center;
     padding: 5px 0;
-    
+
     .quantity-display {
       font-size: 1.1rem;
       padding: 0 15px;
