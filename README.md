@@ -1,26 +1,55 @@
-# React + Vite
+# Shopping Cart 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+A simple shopping cart application built with **React** as part of **The Odin Project** curriculum.  
+The goal of this project was to practice component-based architecture, client-side routing, state management, testing, and deployment of a single-page application (SPA).
 
-Currently, two official plugins are available:
+🔗 **Live Demo:**  
+https://minecraft-shopping-cart.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
-  uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in
-  [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📚 About the Project
 
-The React Compiler is not enabled on this template because of its impact on dev
-& build performances. To add it, see
-[this documentation](https://react.dev/learn/react-compiler/installation).
+This project is an **exercise from The Odin Project** designed to reinforce key React concepts, including:
 
-## Expanding the ESLint configuration
+- Component and folder structure planning
+- React Router for navigation
+- Shared state across multiple pages
+- Controlled inputs
+- Testing with React Testing Library
+- Deploying SPAs correctly
 
-If you are developing a production application, we recommend using TypeScript
-with type-aware lint rules enabled. Check out the
-[TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
-for information on how to integrate TypeScript and
-[`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- **Three Pages**
+  - **Home** – Simple landing page with images and information
+  - **Shop** – Displays products fetched from an external API
+  - **Cart** – Shows selected items and allows quantity updates
+
+- **Navigation Bar**
+  - Visible on all pages
+  - Cart link updates in real time to reflect total items in the cart
+
+- **Shop Page**
+  - Products fetched from the **FakeStore API**
+  - Each product has:
+    - Title
+    - Quantity input field
+    - Increment / decrement buttons
+    - “Add to Cart” button
+
+- **Cart Page**
+  - Displays selected items and quantities
+  - Allows:
+    - Increasing/decreasing quantity
+    - Removing items entirely
+  - No checkout or payment system (by design)
+
+- **Testing**
+  - Thoroughly tested using **React Testing Library**
+  - External libraries like `react-router-dom` are not tested directly
+
+- **Styling**
+  - Styled to be clean and presentable for showcasing
