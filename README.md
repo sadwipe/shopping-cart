@@ -8,7 +8,7 @@ https://minecraft-shopping-cart.netlify.app/
 
 ---
 
-## 📚 About the Project
+## About the Project
 
 This project is an **exercise from The Odin Project** designed to reinforce key React concepts, including:
 
@@ -21,7 +21,7 @@ This project is an **exercise from The Odin Project** designed to reinforce key 
 
 ---
 
-## ✨ Features
+## Features
 
 - **Three Pages**
   - **Home** – Simple landing page with images and information
