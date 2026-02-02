@@ -24,7 +24,9 @@ export default function SummaryContent() {
           {totalPrice}{' '}
         </p>
       </div>
-      <Link className={styles['checkout-btn']}>[ Checkout → ]</Link>
+      <Link to='/' className={styles['checkout-btn']}>
+        [ Checkout → ]
+      </Link>
     </div>
   );
 }
