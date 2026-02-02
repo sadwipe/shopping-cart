@@ -79,3 +79,38 @@
     color: $text-color;
   }
 }
+
+@media (max-width: 600px) {
+  .header {
+    padding: 8px 12px;
+    border-width: 2px;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px; 
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .checkout-icon {
+    height: 28px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .cart-capacity {
+    top: 10px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    font-size: 0.4rem;
+    padding: 0;
+  }
+}

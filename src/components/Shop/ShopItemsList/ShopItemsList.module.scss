@@ -6,3 +6,10 @@
   gap: 20px;
   width: 80%;
 }
+
+@media (max-width: 600px) {
+  .items-container {
+    // width: 100%;
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,3 +8,9 @@
   gap: 40px;
   align-items: center;
 }
+
+@media (max-width: 600px) {
+  .shop-page {
+    width: 100%;
+  }
+}

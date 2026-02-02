@@ -5,6 +5,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+
+  @media (max-width: 600px) {
+    flex-direction: column; // Stack details and button vertically
+    align-items: flex-start; // Align to the left like a receipt
+    width: 100%;
+    padding: 20px 10px;
+  }
 }
 
 .summary-details {
@@ -13,6 +20,12 @@
   justify-content: center;
   gap: 10px;
   font-size: 1.25rem;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    font-size: 1.1rem;
+    gap: 10px;
+  }
 }
 
 p {
@@ -30,6 +43,12 @@ p {
   font-size: $home-link-font-size;
   animation: blinker 1.5s linear infinite;
   font-size: 1.5rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
+    align-self: center; // Center the blinking button on mobile
+    margin-top: 10px;
+  }
 }
 
 @keyframes blinker {

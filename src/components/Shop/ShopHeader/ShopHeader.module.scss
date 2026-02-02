@@ -52,3 +52,35 @@
   margin-left: auto;
   font-size: $shop-item-count-font-size;
 }
+
+@media (max-width: 600px) {
+  .shop-header {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .shop-title {
+    border-right: none;
+    padding-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .sorting-container {
+    order: 3;
+    width: 100%;
+  }
+
+  .sorting-button {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .item-count {
+    margin-left: auto;
+    font-size: 0.9rem;
+    align-self: center;
+  }
+}

@@ -12,3 +12,9 @@
 .footer > * {
   font-size: clamp(0.75rem, 0.134rem + 0.722vw, 1rem);
 }
+
+@media (max-width: 600px) {
+  .footer {
+    display: none;
+  }
+}

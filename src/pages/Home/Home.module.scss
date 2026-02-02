@@ -28,3 +28,17 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+    text-wrap: wrap;
+    margin: 0 1rem;
+  }
+}
