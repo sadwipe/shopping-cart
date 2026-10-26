@@ -1,55 +1,100 @@
-# Shopping Cart 🛒
+# MineRetro Shop — E-Commerce Cart
 
-A simple shopping cart application built with **React** as part of **The Odin Project** curriculum.  
-The goal of this project was to practice component-based architecture, client-side routing, state management, testing, and deployment of a single-page application (SPA).
+A terminal-inspired, Minecraft-themed e-commerce web application built with **React 18** and bundled with **Vite**. The project delivers a nostalgic CRT terminal user interface while adhering to modern frontend engineering standards: comprehensive test coverage (43 unit & integration tests), centralized state management with cross-session persistence, resilient local data architecture, and modular styling with pixel-perfect asset rendering.
 
-🔗 **Live Demo:**  
-https://minecraft-shopping-cart.netlify.app/
+![MineRetro Shop Preview](./src/assets/preview.png)
+
+## Live Demo
+Check out the live deployment: **[minecraft-shopping-cart.netlify.app](https://minecraft-shopping-cart.netlify.app/)**
 
 ---
 
-## About the Project
+## Technical Highlights & Architecture
 
-This project is an **exercise from The Odin Project** designed to reinforce key React concepts, including:
-
-- Component and folder structure planning
-- React Router for navigation
-- Shared state across multiple pages
-- Controlled inputs
-- Testing with React Testing Library
-- Deploying SPAs correctly
+* **Extensive Automated Testing Suite (43 Tests Passed):**
+  * 15 distinct test suites covering full application behavior using **Vitest** and **React Testing Library**.
+  * Validates component mounting, navigation triggers, input sanitization, boundaries/clamping on numeric inputs, sort mechanics, subtotal calculations, and item removals.
+* **Centralized State & Persistence (`ShopContext`):**
+  * Custom context provider managing global shopping cart state across decoupled routes.
+  * Synchronized with `localStorage` so user selections and cart quantities persist across page reloads and browser sessions.
+  * Real-time calculation of badge counters and cart aggregates without redundant re-renders.
+* **Resilient Data Fallback Architecture:**
+  * Implemented an internal static data catalog with binary search lookup utilities (`binarySearchItem`), ensuring the storefront remains 100% operational and immune to third-party public API outages.
+* **Client-Side Routing & SPA Configuration:**
+  * Multi-view navigation (`Home`, `Shop`, `Checkout`) powered by **React Router v6**.
+  * Configured with server rewrites (`_redirects`) for seamless deep-link resolution on Netlify.
+* **Modular CRT & Pixel-Art Aesthetics:**
+  * Scoped styling using **SCSS Modules** preventing class name collisions.
+  * Enforced crisp pixel rendering (`image-rendering: pixelated;`) for authentic 16x16 Minecraft item textures alongside custom CRT terminal glow typography.
+* **Code Quality & CI Enforcements:**
+  * Formatted with **Prettier** and strictly linted with **ESLint** (including React Hooks rules).
+  * Automated pre-commit validation using **Husky** to prevent broken code or failing style rules from entering source control.
 
 ---
 
 ## Features
 
-- **Three Pages**
-  - **Home** – Simple landing page with images and information
-  - **Shop** – Displays products fetched from an external API
-  - **Cart** – Shows selected items and allows quantity updates
+- **Retro Terminal Interface:** Monochromatic green-on-black terminal design with responsive layout support.
+- **Dynamic Catalog & Sorting:** Instant client-side ordering (Alphabetical A-Z, Z-A, and Price High/Low).
+- **Interactive Cart Controls:** Increment, decrement, and direct numerical quantity editing with input clamping.
+- **Live Cart Badge:** Header indicator dynamically updates in real time to reflect cumulative item counts.
+- **Item Removal & Subtotals:** Granular item removal and instant price calculations on the checkout screen.
 
-- **Navigation Bar**
-  - Visible on all pages
-  - Cart link updates in real time to reflect total items in the cart
+---
 
-- **Shop Page**
-  - Products fetched from the **FakeStore API**
-  - Each product has:
-    - Title
-    - Quantity input field
-    - Increment / decrement buttons
-    - “Add to Cart” button
+## Tech Stack
 
-- **Cart Page**
-  - Displays selected items and quantities
-  - Allows:
-    - Increasing/decreasing quantity
-    - Removing items entirely
-  - No checkout or payment system (by design)
+* **Frontend Framework:** React 18
+* **Build Tool:** Vite
+* **Routing:** React Router v6
+* **State Management:** React Context API + LocalStorage persistence
+* **Testing:** Vitest, React Testing Library, jsdom
+* **Styling:** SCSS Modules, CSS3 (Pixelated image rendering, custom scrollbars)
+* **Code Quality:** ESLint, Prettier, Husky (pre-commit hooks)
+* **Hosting:** Netlify
 
-- **Testing**
-  - Thoroughly tested using **React Testing Library**
-  - External libraries like `react-router-dom` are not tested directly
+---
 
-- **Styling**
-  - Styled to be clean and presentable for showcasing
+## Getting Started
+
+### Prerequisites
+* Node.js (v18 or higher recommended)
+* npm
+
+### Installation & Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sadwipe/shopping-cart.git
+   cd shopping-cart
+   ```
+
+2. **Install project dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open your browser and navigate to `http://localhost:5173`.
+
+### Running Tests
+
+Execute the complete Vitest test suite:
+```bash
+npm test
+```
+
+### Production Build
+
+Create an optimized production bundle:
+```bash
+npm run build
+```
+
+Preview the production build locally:
+```bash
+npm run preview
+```
