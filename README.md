@@ -1,6 +1,6 @@
 # MineRetro Shop — E-Commerce Cart
 
-A terminal-inspired, Minecraft-themed e-commerce web application built with **React 18** and bundled with **Vite**. The project delivers a nostalgic CRT terminal user interface while adhering to modern frontend engineering standards: comprehensive test coverage (43 unit & integration tests), centralized state management with cross-session persistence, resilient local data architecture, and modular styling with pixel-perfect asset rendering.
+A terminal-inspired, Minecraft-themed e-commerce web application built with **React 18** and bundled with **Vite**.
 
 ![MineRetro Shop Preview](./src/assets/preview.png)
 
