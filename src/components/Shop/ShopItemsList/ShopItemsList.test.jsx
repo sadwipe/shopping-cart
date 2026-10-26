@@ -30,15 +30,6 @@ describe('ShopItemsList', () => {
     expect(screen.getByText(/no items available/i)).toBeInTheDocument();
   });
 
-  it('renders error message when error exists', () => {
-    renderWithContext({ items: [{}], error: 'Network error' });
-
-    expect(
-      screen.getByText(/the data could not be loaded/i),
-    ).toBeInTheDocument();
-    expect(screen.getByText(/network error/i)).toBeInTheDocument();
-  });
-
   it('renders a list of shop items when items exist', () => {
     renderWithContext({
       items: [

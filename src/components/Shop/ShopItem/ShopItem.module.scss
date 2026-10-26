@@ -5,17 +5,15 @@
   padding: 10px;
   font-size: 0.75rem;
   display: flex;
-  gap: 20px;
-  // min-height: 200px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .card-header {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px; /* reduce distanța ca să aibă titlul loc */
 }
 
 .description-container {
@@ -31,11 +29,19 @@
   word-break: break-word;
   overflow-wrap: anywhere;
   line-height: 1.4;
+  margin: 0;
 }
 
 .item-image {
   aspect-ratio: 1;
   height: clamp(50px, 5vw, 100px);
+  width: auto;
+  flex-shrink: 0; /* previne comprimarea sau suprapunerea imaginii când titlul e lung */
+
+  /* Pixelated rendering pentru texturile de Minecraft */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .item-description {
@@ -70,7 +76,3 @@
   background-color: gray;
   border-radius: 4px;
 }
-
-// .item-description::-webkit-scrollbar {
-//   display: none;
-// }
